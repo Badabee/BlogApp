@@ -32,7 +32,15 @@ class PostController {
     })
   }
 
-  async store() {}
+  async store({request, response}) {
+    console.log(request.post())
+
+    // const {} = request.post()
+
+    // const category = await Post.create({ name, description, cat_slug })
+
+    // return response.redirect('/categories')
+  }
 
   async show({ params: { slug }, view, response }) {
     const post = await Post.findBy('slug', slug)

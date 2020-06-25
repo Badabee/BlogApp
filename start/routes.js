@@ -15,8 +15,7 @@
 
 const Route = use('Route')
 
-Route.on('/').render('index')
-Route.on('/page').render('page')
+Route.get('/', 'HomeController.index')
 
 /* Categories */
 Route.get('categories', 'CategoryController.index')
