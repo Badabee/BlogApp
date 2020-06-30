@@ -1,5 +1,7 @@
 'use strict'
 
+const dotenv = require("dotenv");
+dotenv.config({ silent: process.env.NODE_ENV === 'production'});
 /*
 |--------------------------------------------------------------------------
 | Http server
